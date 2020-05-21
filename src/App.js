@@ -41,20 +41,24 @@ function App() {
           style={{
             backgroundColor: "#fff",
             position: "absolute",
-            right: 0,
+            right: 20,
             bottom: 0,
             height: 500,
             width: 500,
           }}
         >
           <AppBar position="static">
-            <div style={{ backgroundColor: "gray" }}>
-              <Button style={{}} onClick={handleClose}>
+            <div
+              style={{
+                backgroundColor: "#404040",
+              }}
+            >
+              <Button style={{ color: "#fff" }} onClick={handleClose}>
                 x
               </Button>
             </div>
           </AppBar>
-          <div style={{ padding: 6 }}>
+          <div style={{ padding: 16 }}>
             <div style={{}}>
               <TextField
                 InputProps={{
@@ -62,26 +66,33 @@ function App() {
                     <InputAdornment position="start">To</InputAdornment>
                   ),
                 }}
-                style={{ width: 480 }}
+                style={{ width: 460 }}
                 id="standard-basic"
               />
             </div>
             <div style={{}}>
               <TextField
                 placeholder="Subject"
-                style={{ width: 480 }}
+                style={{ width: 460 }}
                 id="standard-basic"
               />
             </div>
             <div>
-              <TextField
-                fullWidth={480}
-                style={{ borderBottomColor: "#fff" }}
-                id="outlined-multiline-static"
-                multiline
-                rows={19}
-                variant="standard"
+              <textarea
+                name="body"
+                style={{ border: 0, width: 480, height: 380, marginTop: 6 }}
+                // onChange={this.handleChange}
+                // value={value}
               />
+            </div>
+            <div style={{ position: "absolute", bottom: 10, left: 10 }}>
+              <Button
+                // style={{ marginTop: 16 }}
+                variant="contained"
+                color="primary"
+              >
+                Send
+              </Button>
             </div>
           </div>
         </div>
